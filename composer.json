@@ -1,0 +1,23 @@
+{
+    "name": "xy_jx/qcloud",
+    "description": "Qcloud",
+    "require": {
+        "php": ">=7.1.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "guzzlehttp/guzzle-services": "~1.2"
+    },
+    "license": "Apache-2.0",
+    "autoload": {
+        "psr-4": {
+            "xy_jx\\Qcloud\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "xy_jx",
+            "email": "zhangschooi@qq.com"
+        }
+    ],
+    "minimum-stability": "dev"
+
+}
