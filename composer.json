@@ -6,7 +6,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "guzzlehttp/guzzle-services": "~1.2"
     },
-    "license": "Apache-2.0",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "xy_jx\\Qcloud\\": "src/"
