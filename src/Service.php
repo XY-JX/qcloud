@@ -12,7 +12,7 @@ class Service {
                 'AbortMultipartUpload' => array(
                     'httpMethod' => 'DELETE',
                     'uri' => '/{Bucket}{/Key*}',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'AbortMultipartUploadOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -26,7 +26,7 @@ class Service {
                             'location' => 'uri',
                             'minLength' => 1,
                             'filters' => array(
-                                'Qcloud\\Cos\\Client::explodeKey')),
+                                'xy_jx\\Qcloud\\Client::explodeKey')),
                         'UploadId' => array(
                             'required' => true,
                             'type' => 'string',
@@ -39,7 +39,7 @@ class Service {
                 'CreateBucket' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'CreateBucketOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -61,7 +61,7 @@ class Service {
                 'CompleteMultipartUpload' => array(
                     'httpMethod' => 'POST',
                     'uri' => '/{Bucket}{/Key*}',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'CompleteMultipartUploadOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -80,7 +80,7 @@ class Service {
                             'location' => 'uri',
                             'minLength' => 1,
                             'filters' => array(
-                                'Qcloud\\Cos\\Client::explodeKey'
+                                'xy_jx\\Qcloud\\Client::explodeKey'
                             )
                         ),
                         'Parts' => array(
@@ -119,7 +119,7 @@ class Service {
                 'CreateMultipartUpload' => array(
                     'httpMethod' => 'POST',
                     'uri' => '/{Bucket}{/Key*}?uploads',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'CreateMultipartUploadOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -198,7 +198,7 @@ class Service {
                             'location' => 'uri',
                             'minLength' => 1,
                             'filters' => array(
-                                'Qcloud\\Cos\\Client::explodeKey'
+                                'xy_jx\\Qcloud\\Client::explodeKey'
                             )
                         ),
                         'ServerSideEncryption' => array(
@@ -256,7 +256,7 @@ class Service {
                 'CopyObject' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}{/Key*}',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'CopyObjectOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -371,7 +371,7 @@ class Service {
                             'location' => 'uri',
                             'minLength' => 1,
                             'filters' => array(
-                                'Qcloud\\Cos\\Client::explodeKey')
+                                'xy_jx\\Qcloud\\Client::explodeKey')
                         ),
                         'MetadataDirective' => array(
                             'type' => 'string',
@@ -433,7 +433,7 @@ class Service {
                 'DeleteBucket' => array(
                     'httpMethod' => 'DELETE',
                     'uri' => '/{Bucket}',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'DeleteBucketOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -448,7 +448,7 @@ class Service {
                 'DeleteBucketCors' => array(
                     'httpMethod' => 'DELETE',
                     'uri' => '/{Bucket}?cors',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'DeleteBucketCorsOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -463,7 +463,7 @@ class Service {
                 'DeleteBucketTagging' => array(
                     'httpMethod' => 'DELETE',
                     'uri' => '/{Bucket}?tagging',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'DeleteBucketTaggingOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -478,7 +478,7 @@ class Service {
                 'DeleteBucketInventory' => array(
                     'httpMethod' => 'Delete',
                     'uri' => '/{Bucket}?inventory',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'DeleteBucketInventoryOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -499,7 +499,7 @@ class Service {
                 'DeleteObject' => array(
                     'httpMethod' => 'DELETE',
                     'uri' => '/{Bucket}{/Key*}',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'DeleteObjectOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -514,7 +514,7 @@ class Service {
                             'location' => 'uri',
                             'minLength' => 1,
                             'filters' => array(
-                                'Qcloud\\Cos\\Client::explodeKey'
+                                'xy_jx\\Qcloud\\Client::explodeKey'
                             )
                         ),
                         'MFA' => array(
@@ -538,7 +538,7 @@ class Service {
                 'DeleteObjects' => array(
                     'httpMethod' => 'POST',
                     'uri' => '/{Bucket}?delete',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'DeleteObjectsOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -596,7 +596,7 @@ class Service {
                 'DeleteBucketWebsite' => array(
                     'httpMethod' => 'DELETE',
                     'uri' => '/{Bucket}?website',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'DeleteBucketWebsiteOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -611,7 +611,7 @@ class Service {
                 'DeleteBucketLifecycle' => array(
                     'httpMethod' => 'DELETE',
                     'uri' => '/{Bucket}?lifecycle',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'DeleteBucketLifecycleOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -626,7 +626,7 @@ class Service {
                 'DeleteBucketReplication' => array(
                     'httpMethod' => 'DELETE',
                     'uri' => '/{Bucket}?replication',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'DeleteBucketReplicationOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -641,7 +641,7 @@ class Service {
                 'GetObject' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}{/Key*}',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'GetObjectOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -686,7 +686,7 @@ class Service {
                             'location' => 'uri',
                             'minLength' => 1,
                             'filters' => array(
-                                'Qcloud\\Cos\\Client::explodeKey'
+                                'xy_jx\\Qcloud\\Client::explodeKey'
                             )
                         ),
                         'Range' => array(
@@ -758,7 +758,7 @@ class Service {
                 'GetObjectAcl' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}{/Key*}?acl',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'GetObjectAclOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -773,7 +773,7 @@ class Service {
                             'location' => 'uri',
                             'minLength' => 1,
                             'filters' => array(
-                                'Qcloud\\Cos\\Client::explodeKey')
+                                'xy_jx\\Qcloud\\Client::explodeKey')
                         ),
                         'VersionId' => array(
                             'type' => 'string',
@@ -791,7 +791,7 @@ class Service {
                 'GetBucketAcl' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?acl',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'GetBucketAclOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -806,7 +806,7 @@ class Service {
                 'GetBucketCors' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?cors',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'GetBucketCorsOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -821,7 +821,7 @@ class Service {
                 'GetBucketDomain' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?domain',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'GetBucketDomainOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -836,7 +836,7 @@ class Service {
                 'GetBucketAccelerate' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?accelerate',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'GetBucketAccelerateOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -851,7 +851,7 @@ class Service {
                 'GetBucketWebsite' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?website',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'GetBucketWebsiteOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -866,7 +866,7 @@ class Service {
                 'GetBucketLifecycle' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?lifecycle',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'GetBucketLifecycleOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -881,7 +881,7 @@ class Service {
                 'GetBucketVersioning' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?versioning',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'GetBucketVersioningOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -896,7 +896,7 @@ class Service {
                 'GetBucketReplication' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?replication',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'GetBucketReplicationOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -911,7 +911,7 @@ class Service {
                 'GetBucketLocation' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?location',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'GetBucketLocationOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -926,7 +926,7 @@ class Service {
                 'GetBucketNotification' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?notification',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'GetBucketNotificationOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -941,7 +941,7 @@ class Service {
                 'GetBucketLogging' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?logging',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'GetBucketLoggingOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -956,7 +956,7 @@ class Service {
                 'GetBucketInventory' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?inventory',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'GetBucketInventoryOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -977,7 +977,7 @@ class Service {
                 'GetBucketTagging' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?tagging',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'GetBucketTaggingOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -992,7 +992,7 @@ class Service {
                 'UploadPart' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}{/Key*}',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'UploadPartOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -1031,7 +1031,7 @@ class Service {
                             'location' => 'uri',
                             'minLength' => 1,
                             'filters' => array(
-                                'Qcloud\\Cos\\Client::explodeKey'
+                                'xy_jx\\Qcloud\\Client::explodeKey'
                             )
                         ),
                         'PartNumber' => array(
@@ -1080,7 +1080,7 @@ class Service {
                 'PutObject' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}{/Key*}',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'PutObjectOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -1151,7 +1151,7 @@ class Service {
                             'location' => 'uri',
                             'minLength' => 1,
                             'filters' => array(
-                                'Qcloud\\Cos\\Client::explodeKey'
+                                'xy_jx\\Qcloud\\Client::explodeKey'
                             )
                         ),
                         'ServerSideEncryption' => array(
@@ -1214,7 +1214,7 @@ class Service {
                 'PutObjectAcl' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}{/Key*}?acl',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'PutObjectAclOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -1305,7 +1305,7 @@ class Service {
                             'location' => 'uri',
                             'minLength' => 1,
                             'filters' => array(
-                                'Qcloud\\Cos\\Client::explodeKey')
+                                'xy_jx\\Qcloud\\Client::explodeKey')
                         ),
                         'RequestPayer' => array(
                             'type' => 'string',
@@ -1322,7 +1322,7 @@ class Service {
                 'PutBucketAcl' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}?acl',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'PutBucketAclOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -1428,7 +1428,7 @@ class Service {
                 'PutBucketCors' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}?cors',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'PutBucketCorsOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -1516,7 +1516,7 @@ class Service {
                 'PutBucketDomain' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}?domain',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'PutBucketDomainOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -1567,7 +1567,7 @@ class Service {
                 'PutBucketLifecycle' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}?lifecycle',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'PutBucketLifecycleOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -1629,7 +1629,7 @@ class Service {
                                                         'type' => 'string'
                                                     ),
                                                     'filters' => array(
-                                                        'Qcloud\\Cos\\Client::explodeKey'),
+                                                        'xy_jx\\Qcloud\\Client::explodeKey'),
                                                     'Value' => array(
                                                         'type' => 'string'
                                                     ),
@@ -1694,7 +1694,7 @@ class Service {
                 'PutBucketVersioning' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}?versioning',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'PutBucketVersioningOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -1728,7 +1728,7 @@ class Service {
                 'PutBucketAccelerate' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}?accelerate',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'PutBucketAccelerateOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -1759,7 +1759,7 @@ class Service {
                 'PutBucketWebsite' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}?website',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'PutBucketWebsiteOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -1854,7 +1854,7 @@ class Service {
                 'PutBucketReplication' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}?replication',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'PutBucketReplicationOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -1919,7 +1919,7 @@ class Service {
                 'PutBucketNotification' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}?notification',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'PutBucketNotificationOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -1993,7 +1993,7 @@ class Service {
                                                 ),
                                             ),
                                             'filters' => array(
-                                                'Qcloud\\Cos\\Client::explodeKey')
+                                                'xy_jx\\Qcloud\\Client::explodeKey')
                                         ),
                                     ),
                                 ),
@@ -2005,7 +2005,7 @@ class Service {
                 'PutBucketTagging' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}?tagging',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'PutBucketTaggingOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -2046,7 +2046,7 @@ class Service {
                 'PutBucketLogging' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}?logging',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'PutBucketLoggingOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -2081,7 +2081,7 @@ class Service {
                 'PutBucketInventory' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}?inventory',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'PutBucketInventoryOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -2180,7 +2180,7 @@ class Service {
                 'RestoreObject' => array(
                     'httpMethod' => 'POST',
                     'uri' => '/{Bucket}{/Key*}?restore',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'RestoreObjectOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -2200,7 +2200,7 @@ class Service {
                             'location' => 'uri',
                             'minLength' => 1,
                             'filters' => array(
-                                'Qcloud\\Cos\\Client::explodeKey')
+                                'xy_jx\\Qcloud\\Client::explodeKey')
                         ),
                         'VersionId' => array(
                             'type' => 'string',
@@ -2233,7 +2233,7 @@ class Service {
                 'ListParts' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}{/Key*}',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'ListPartsOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -2248,7 +2248,7 @@ class Service {
                             'location' => 'uri',
                             'minLength' => 1,
                             'filters' => array(
-                                'Qcloud\\Cos\\Client::explodeKey'
+                                'xy_jx\\Qcloud\\Client::explodeKey'
                             )
                         ),
                         'MaxParts' => array(
@@ -2272,7 +2272,7 @@ class Service {
                 'ListObjects' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'ListObjectsOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -2312,7 +2312,7 @@ class Service {
                 'ListBuckets' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'ListBucketsOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -2322,7 +2322,7 @@ class Service {
                 'ListObjectVersions' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?versions',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'ListObjectVersionsOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -2367,7 +2367,7 @@ class Service {
                 'ListMultipartUploads' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?uploads',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'ListMultipartUploadsOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -2412,7 +2412,7 @@ class Service {
                 'ListBucketInventoryConfigurations' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?inventory',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'ListBucketInventoryConfigurationsOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -2432,7 +2432,7 @@ class Service {
                 'HeadObject' => array(
                     'httpMethod' => 'HEAD',
                     'uri' => '/{Bucket}{/Key*}',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'HeadObjectOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -2477,7 +2477,7 @@ class Service {
                             'location' => 'uri',
                             'minLength' => 1,
                             'filters' => array(
-                                'Qcloud\\Cos\\Client::explodeKey')
+                                'xy_jx\\Qcloud\\Client::explodeKey')
                         ),
                         'Range' => array(
                             'type' => 'string',
@@ -2514,7 +2514,7 @@ class Service {
                 'HeadBucket' => array(
                     'httpMethod' => 'HEAD',
                     'uri' => '/{Bucket}',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'HeadBucketOutput',
                     'responseType' => 'model',
                     'parameters' => array(
@@ -2529,7 +2529,7 @@ class Service {
                 'UploadPartCopy' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}{/Key*}',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'UploadPartCopyOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -2590,7 +2590,7 @@ class Service {
                             'location' => 'uri',
                             'minLength' => 1,
                             'filters' => array(
-                                'Qcloud\\Cos\\Client::explodeKey')
+                                'xy_jx\\Qcloud\\Client::explodeKey')
                         ),
                         'PartNumber' => array(
                             'required' => true,
@@ -2644,7 +2644,7 @@ class Service {
                 'SelectObjectContent' => array(
                     'httpMethod' => 'Post',
                     'uri' => '/{/Key*}?select&select-type=2',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'SelectObjectContentOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -2665,7 +2665,7 @@ class Service {
                             'location' => 'uri',
                             'minLength' => 1,
                             'filters' => array(
-                                'Qcloud\\Cos\\Client::explodeKey')
+                                'xy_jx\\Qcloud\\Client::explodeKey')
                         ),
                         'Expression' => array(
                             'type' => 'string',
@@ -2791,7 +2791,7 @@ class Service {
                 'PutBucketIntelligentTiering' => array(
                     'httpMethod' => 'PUT',
                     'uri' => '/{Bucket}?intelligenttiering',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'PutBucketIntelligentTieringOutput',
                     'responseType' => 'model',
                     'data' => array(
@@ -2829,7 +2829,7 @@ class Service {
                 'GetBucketIntelligentTiering' => array(
                     'httpMethod' => 'GET',
                     'uri' => '/{Bucket}?intelligenttiering',
-                    'class' => 'Qcloud\\Cos\\Command',
+                    'class' => 'xy_jx\\Qcloud\\Command',
                     'responseClass' => 'GetBucketIntelligentTieringOutput',
                     'responseType' => 'model',
                     'parameters' => array(

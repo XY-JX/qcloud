@@ -47,7 +47,7 @@ class ExceptionMiddleware {
 		//throw RequestException::create($request, $response);
         $parts = $this->parser->parse($request, $response);
 
-        $className = 'Qcloud\\Cos\\Exception\\' . $parts['code'];
+        $className = 'xy_jx\Qcloud\\Exception\\' . $parts['code'];
         if (substr($className, -9) !== 'Exception') {
             $className .= 'Exception';
         }
